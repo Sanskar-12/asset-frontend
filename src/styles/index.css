@@ -17,20 +17,8 @@ body {
   background-color: #f8fafc;
 }
 
-.sidebar-active {
-  @apply bg-blue-600 text-white;
-}
-
-.nav-link {
-  @apply text-gray-700 hover:text-blue-600 transition-colors;
-}
-
 .card {
   @apply bg-white rounded-lg shadow-md p-6 border border-gray-200;
-}
-
-.stat-card {
-  @apply bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 border-l-4 border-blue-600;
 }
 
 .btn-primary {
@@ -39,10 +27,6 @@ body {
 
 .btn-secondary {
   @apply bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors;
-}
-
-.btn-danger {
-  @apply bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors;
 }
 
 .modal-overlay {

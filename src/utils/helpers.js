@@ -14,36 +14,12 @@ export const getStatusBadgeColor = (status) => {
   return statusColors[status] || "badge-secondary";
 };
 
-export const getStatusColor = (status) => {
-  const colors = {
-    Available: "#10b981",
-    Assigned: "#3b82f6",
-    "In Use": "#3b82f6",
-    Maintenance: "#f59e0b",
-    Damaged: "#ef4444",
-    Lost: "#ef4444",
-    Retired: "#6b7280",
-  };
-  return colors[status] || "#6b7280";
-};
-
 export const formatDate = (date) => {
   if (!date) return "-";
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "short",
     day: "numeric",
-  });
-};
-
-export const formatDateTime = (date) => {
-  if (!date) return "-";
-  return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
   });
 };
 
