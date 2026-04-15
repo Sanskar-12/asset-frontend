@@ -1,4 +1,3 @@
-import React from "react";
 import { getStatusBadgeColor } from "../utils/helpers";
 
 export default function StatusBadge({ status }) {

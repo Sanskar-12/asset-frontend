@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { assetAPI } from "../services/api";
 import Modal from "../components/Modal";
 import AssetForm from "../components/AssetForm";

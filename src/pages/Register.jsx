@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { authAPI } from "../services/api";
 import { setAuthToken, setUser } from "../utils/helpers";
@@ -61,7 +61,7 @@ export default function Register() {
     }
 
     try {
-      const response = await authAPI.register({
+      await authAPI.register({
         name: formData.name,
         email: formData.email,
         password: formData.password,

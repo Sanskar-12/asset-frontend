@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { getUser, setUser } from "../utils/helpers";
 
 export default function Settings() {

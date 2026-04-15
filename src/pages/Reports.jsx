@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { assetAPI } from "../services/api";
-import StatusBadge from "../components/StatusBadge";
 import { exportToCSV, formatDate } from "../utils/helpers";
 
 export default function Reports() {
   const [assets, setAssets] = useState([]);
   const [stats, setStats] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchReportData();
@@ -14,7 +12,6 @@ export default function Reports() {
 
   const fetchReportData = async () => {
     try {
-      setLoading(true);
       const [assetsRes, statsRes] = await Promise.all([
         assetAPI.getAllAssets({}),
         assetAPI.getAssetStats(),
@@ -23,8 +20,6 @@ export default function Reports() {
       setStats(statsRes.data);
     } catch (error) {
       console.error("Error fetching report data:", error);
-    } finally {
-      setLoading(false);
     }
   };
 
