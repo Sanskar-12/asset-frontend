@@ -3,7 +3,7 @@ import { assetAPI } from "../services/api";
 import Modal from "../components/Modal";
 import AssetForm from "../components/AssetForm";
 import StatusBadge from "../components/StatusBadge";
-import { formatDate, getCategoryIcon } from "../utils/helpers";
+import { getCategoryIcon } from "../utils/helpers";
 
 export default function Assets() {
   const [assets, setAssets] = useState([]);
