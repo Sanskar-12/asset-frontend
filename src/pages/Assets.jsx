@@ -43,7 +43,14 @@ export default function Assets() {
 
   useEffect(() => {
     filterAssets();
-  }, [assets, searchTerm, categoryFilter, statusFilter, locationFilter]);
+  }, [
+    assets,
+    searchTerm,
+    categoryFilter,
+    statusFilter,
+    locationFilter,
+    filterAssets,
+  ]);
 
   const fetchAssets = async () => {
     try {
